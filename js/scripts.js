@@ -1,7 +1,9 @@
 // Business (or back-end) logic:
 var triangle = function(a, b, c) {
   var result;
-  if (a ===  b && a === c && b === c) {
+  if (a + b <= c || a + c <= b || b + c <= a) {
+     result = "Not a triangle fool, revise your math!"
+  } else if (a ===  b && a === c && b === c) {
     result = "Equilateral";
   } else if (a === b || a === c || b === c) {
     result = "Isosceles";
